@@ -1,1 +1,14 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
 
+\title{"P0" NESTOR}
+\author{nestor.zeus }
+\date{January 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\end{document}
