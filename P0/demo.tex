@@ -36,12 +36,12 @@ Esta practica es un ejemplo de como realizar los reportes de nuestras tareas. Va
   \label{equ}
 \end{equation}
 
-Tambien podemos citar fuentes. Al final se incluye la figura de una orquidea en la figura \ref{flor}. Vamos a aprender ademas a citar fuentes \citep{ejemplo}.
+Tambien podemos citar fuentes. Al final se incluye la figura de una orquidea en la figura \ref{flor}. Vamos a aprender ademas a citar fuentes {ejemplo}.
 Se incluye unas tablas \ref{datos} con algunos datos y en la figura \citep{imagen} \ref{flor} hay una orquidea.
 
 \begin{figure} % figura
     \centering
-    \includegraphics[width=90mm]{orchid.jpg} % archivo
+    \includegraphics [width=90mm]{orchid.jpg} % archivo
     \caption{orchid recuperada de \url{https://www.floresyplantas.net/orquidea-cymbidium/} con licencia CC.}
     \label{flor}
 \end{figure}
@@ -74,8 +74,8 @@ En esta secci\'{o}n se aprende a crear tablas y cuadros.
     \begin{tabular}{c|c|c|c|c|c||c|c|}
       Dato 1 & Dato 2 & $\Omega$ & Dato 3 \\
       NP 1 & NP 2 & $\pi$ & NP 3 \\
-      Resultado 1  &   Resultado 2   &   $\alpha$ &  Resultado 3    
-      
+      Resultado 1  &   Resultado 2   &   $\alpha$ &  Resultado 3 
+    
     \end{tabular}
 \end{table}
 
@@ -163,7 +163,7 @@ En esta parte se aprenderá a como utilizar y hacer una grafica en LATEX
 \begin{tikzpicture}
 \begin{axis}[
 title={Absorbancia  de la corrosion de H2SO4 con la Temperatura},
-xlabel={Temperatura [\textcelsius]},
+xlabel={Temperatura \textcelsius},
 ylabel={Absorbancia anticorrosiva ml de clorato},
 xmin=0, xmax=300,
 ymin=0, ymax=200,
@@ -192,29 +192,20 @@ coordinates{
 En general todo el desarrollo de este documento me sirvió de práctica que me permitió explorar más a fondo las funciones que tiene el programa, además de familiarizarme con su interfaz, comandos y también obtuve más práctica con este programa. Aún así mismo considero que aún tengo mucho que aprender en cuanto a programación de códigos, dado que tuve muchas dificultades, batalle pero se logro el objetivo para aprender en esta parte para trabajar en Overleaf.
 
 \section{Referencias}
+\cite
+{Latex allergy}
+  title={},
+  author={Slater, Jay E},
+  journal={Journal of Allergy and Clinical Immunology},
+  volume={94},
+  number={2},
+  pages={139--149},
+  year={1994},
+  publisher={St. Louis, MO: CV Mosby Co., c1971-}
 
-@article{ejemplo,
-  author = {Autor},
-  title = {T\'{i}tulo},
-  journal = {Nombre de la revista},
-  year = 2020,
-  volume = 15,
-  number = 10,
-  pages = {562--597},
-  doi = {10.123/lolno}
-}
-@article{otroejemplo,
-  author = {Autor2},
-  title = {T\'{i}tulo2},
-  journal = {Nombre de la revista2},
-  year = 2021,
-  volume = 20,
-  number = 15,
-  pages = {562--597},
-  doi = {10.123/lolno}
-}
 
-\bibliography{simu}
-\bibliographystyle{orquidea}
+
+\bibliography{bib}
+\bibliographystyle{plain}
 
 \end{document}
