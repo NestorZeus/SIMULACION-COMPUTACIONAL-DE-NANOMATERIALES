@@ -1,0 +1,112 @@
+> pos = 0
+> dur = 1000
+> mayor = 0
+> regresos = 0
+> cat('Caminata de', dur, 'pasos', '\n')
+Caminata de 1000 pasos 
+> for (paso in 1:dur) {
++     if (runif(1) < 0.5) {
++         pos = pos + 1
++     } else {
++         pos = pos - 1
++     }
++     if (pos == 0) {
++         regresos = regresos + 1 # regreso al origen
++     }
++     mayor = max(mayor, abs(pos))
++ }
+> cat('Fueron', regresos, 'regresos', '\n')
+Fueron 10 regresos 
+> cat('La mayor distancia era de', mayor, '\n')
+La mayor distancia era de 75 
+> manhattan <- function(p1, p2) {
++     return(sum(abs(p1 - p2)))
++ }
+> md.orig <- function(p) {
++     dimension <- length(p)
++     origen <- rep(0, dimension)
++     return(manhattan(p, origen))
++ }
+> 
+> + }
+Error: inesperado '}' en "+ }"
+> 
+> pos = 0
+> dur = 1000
+> mayor = 0
+> regresos = 0
+> cat('Caminata de', dur, 'pasos', '\n')
+Caminata de 1000 pasos 
+> for (paso in 1:dur) {
++     if (runif(1) < 0.5) {
++         pos = pos + 1
++     } else {
++         pos = pos - 1
++     }
++     if (pos == 0) {
++         regresos = regresos + 1 # regreso al origen
++     }
++     mayor = max(mayor, abs(pos))
++ }
+> cat('Fueron', regresos, 'regresos', '\n')
+Fueron 12 regresos 
+> cat('La mayor distancia era de', mayor, '\n')
+La mayor distancia era de 43 
+> manhattan <- function(p1, p2) {
++     return(sum(abs(p1 - p2)))
++ }
+> md.orig <- function(p) {
++     dimension <- length(p)
++     origen <- rep(0, dimension)
++     return(manhattan(p, origen))
++ }
+> 
+> }
+Error: inesperado '}' en "}"
+> }
+Error: inesperado '}' en "}"
+> }
+Error: inesperado '}' en "}"
+> 
+> 
+> cat('La mayor distancia (Manhattan) era de', mayor, '\n')
+La mayor distancia (Manhattan) era de 43 
+>     if (runif(1) < 1) {
++         pos[eje] = pos[eje] + 1
++ cat('La mayor distancia (Manhattan) era de', mayor, '\n')
++ 
++ 
++ 
++ }
+Error: objeto 'eje' no encontrado
+> }
+Error: inesperado '}' en "}"
+> 
+> 
+> pos <- 0
+> runif(1)
+[1] 0.8347509
+> dur <- 10
+> for (t in 1:dur) { 
++   if (runif(1) < 0.5) {
++     pos <- pos + 1
++   } else {
++     pos <- pos - 1 
++   }
++   print(pos)
++ }
+[1] -1
+[1] 0
+[1] 1
+[1] 2
+[1] 1
+[1] 2
+[1] 1
+[1] 0
+[1] -1
+[1] -2
+> print(mayor)
+[1] 43
+> 
+> print(mayor)
+[1] 43
