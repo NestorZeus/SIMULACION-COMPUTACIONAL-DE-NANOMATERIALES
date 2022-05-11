@@ -48,10 +48,6 @@ def poli(maxdeg, varcount, termcount):
         deg = randint(1, maxdeg)
         f.append({'var': var, 'coef': random(), 'deg': deg})
     return pd.DataFrame(f)
-  
-def evaluate(pol, var):
-    return sum([t.coef * var[pol.at[i, 'var']]**t.deg for i, t in pol.iterrows()])
- 
  
 def domin_by(target, challenger):
     if np.any(challenger < target):
@@ -92,36 +88,26 @@ for p in parts['bodies']:
     p.set_edgecolor('green')
     p.set_alpha(1)
 c='blue'
-plt.boxplot([CV[0], CV[1], CV[2], CV[3]],
-            capprops=dict(color=c),
-            whiskerprops=dict(color=c),
-            flierprops=dict(color=c, markeredgecolor=c),
-            medianprops=dict(color='lime'),widths=(0.10, 0.10, 0.10, 0.10))
-plt.subplots_adjust(bottom = 0.3, wspace = 0.05)
-plt.xticks([1,2,3,4], ['2','3','4','5'])
 plt.xlabel('Función')
 plt.savefig('p11p_violin.png', bbox_inches = 'tight')
 plt.close()
-
-result = stats.kruskal(CV[0], CV[1], CV[2], CV[3])
 print(result)
-    
 \end{lstlisting}
 
 
 \section{Resultados}
-El rango de las soluciones de porcentaje no dominada se empieza a distribuir....
+El rango de las soluciones de porcentaje no dominada se empieza a distribuir los porcentajes de las distribuciones de los porcentajes.
 
 
 \begin{figure_1}
     \centering
-    \includegraphics[width=170mm]{Figure_1.png}
-    \caption{Figura 1: Diagrama violín de distribucion de porcentaje}
+    \includegraphics[width=90mm]{p11p_violin.png}
+    \caption{Figura 1: Diagrama violín distribucion de porcentaje}
     \label{figure_1}
 
 \section{Conclusiones}
 
-Rara vez se logran a coincidir y a veces son bastante opuestos, se ocupa una definición para qué en sí es una buena solución \cite{elisa1}.
+Es complicado saber hayar una solución eficiente de una menor cantidad de funciones esto debido a que aumenta el rango de porcentajes de soluciones no encontradas.
 
 
 \bibliography{simulacion}
