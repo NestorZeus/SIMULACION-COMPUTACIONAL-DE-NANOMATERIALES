@@ -4,9 +4,8 @@ import matplotlib.pyplot as plt
 import random
 from math import floor, log, sqrt
 import statistics
-
 ##muestras=100,1000,5000#electrones
-muestras=100,500,700
+muestras=100,500,1000
 F = (2, 5, 8, 12, 15, 20)
 Pd=.5
 pasomax=1
